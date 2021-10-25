@@ -1,0 +1,437 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C4B72497-23AD-4DC5-AD37-A91D170C42A3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>WindowsApp1.My.MyApplication</StartupObject>
+    <RootNamespace>WindowsApp1</RootNamespace>
+    <AssemblyName>WindowsApp1</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>WindowsApp1.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>WindowsApp1.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Text</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Muscle-Car-Mustang-GT-icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\Desktop\Bunifu_UI_v1.5.3\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.11.4.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Protobuf.3.11.4\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.1.11.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Compression.LZ4.1.1.11\lib\net46\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.1.11.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Compression.LZ4.Streams.1.1.11\lib\net46\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=8.0.22.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.8.0.22\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="Ubiety.Dns.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.8.0.22\lib\net452\Ubiety.Dns.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Zstandard.Net, Version=1.1.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.8.0.22\lib\net452\Zstandard.Net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminManage.Designer.vb">
+      <DependentUpon>AdminManage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminManage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogue.Designer.vb">
+      <DependentUpon>Catalogue.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogue.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientForm.Designer.vb">
+      <DependentUpon>ClientForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClientForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientProfile.Designer.vb">
+      <DependentUpon>ClientProfile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClientProfile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientreservation.Designer.vb">
+      <DependentUpon>Clientreservation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Clientreservation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="connection\SqlServerConnection.vb" />
+    <Compile Include="consultation.Designer.vb">
+      <DependentUpon>consultation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="consultation.vb" />
+    <Compile Include="exemplebd.vb" />
+    <Compile Include="exemple_bd.Designer.vb">
+      <DependentUpon>exemple_bd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="exemple_bd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.vb" />
+    <Compile Include="managevoitures.Designer.vb">
+      <DependentUpon>managevoitures.vb</DependentUpon>
+    </Compile>
+    <Compile Include="managevoitures.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module1.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="UpdateAdminProfile.Designer.vb">
+      <DependentUpon>UpdateAdminProfile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateAdminProfile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateClientProfile.Designer.vb">
+      <DependentUpon>UpdateClientProfile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateClientProfile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserLoginDB.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserLoginDB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UserLoginDB.vb">
+      <DependentUpon>UserLoginDB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="viewusersvb.Designer.vb">
+      <DependentUpon>viewusersvb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="viewusersvb.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="visual_basic_stockDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>visual_basic_stockDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="visual_basic_stockDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>visual_basic_stockDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="visual_basic_stockDataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>visual_basic_stockDataSet2.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AdminManage.resx">
+      <DependentUpon>AdminManage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogue.resx">
+      <DependentUpon>Catalogue.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientForm.resx">
+      <DependentUpon>ClientForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientProfile.resx">
+      <DependentUpon>ClientProfile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientreservation.resx">
+      <DependentUpon>Clientreservation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="consultation.resx">
+      <DependentUpon>consultation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="exemple_bd.resx">
+      <DependentUpon>exemple_bd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="managevoitures.resx">
+      <DependentUpon>managevoitures.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateAdminProfile.resx">
+      <DependentUpon>UpdateAdminProfile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateClientProfile.resx">
+      <DependentUpon>UpdateClientProfile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewusersvb.resx">
+      <DependentUpon>viewusersvb.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="UserLoginDB.xsc">
+      <DependentUpon>UserLoginDB.xsd</DependentUpon>
+    </None>
+    <None Include="UserLoginDB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserLoginDB.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UserLoginDB.xss">
+      <DependentUpon>UserLoginDB.xsd</DependentUpon>
+    </None>
+    <None Include="visual_basic_stockDataSet.xsc">
+      <DependentUpon>visual_basic_stockDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="visual_basic_stockDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>visual_basic_stockDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="visual_basic_stockDataSet.xss">
+      <DependentUpon>visual_basic_stockDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="visual_basic_stockDataSet1.xsc">
+      <DependentUpon>visual_basic_stockDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="visual_basic_stockDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>visual_basic_stockDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="visual_basic_stockDataSet1.xss">
+      <DependentUpon>visual_basic_stockDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="visual_basic_stockDataSet2.xsc">
+      <DependentUpon>visual_basic_stockDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="visual_basic_stockDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>visual_basic_stockDataSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="visual_basic_stockDataSet2.xss">
+      <DependentUpon>visual_basic_stockDataSet2.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Car-Purple.ico" />
+    <Content Include="inventory-maintenance-icon.ico" />
+    <Content Include="Muscle-Car-Mustang-GT-icon.ico" />
+    <None Include="Resources\2e2348779153fd4b7b73e547d2092541.jpg" />
+    <None Include="Resources\profilg.png" />
+    <None Include="Resources\ceatebl.png" />
+    <None Include="Resources\profilb.png" />
+    <None Include="Resources\coloneb.png" />
+    <None Include="Resources\ceateb.png" />
+    <None Include="Resources\profil.png" />
+    <None Include="Resources\colone.png" />
+    <None Include="Resources\ceate.png" />
+    <None Include="Resources\update.png" />
+    <None Include="Resources\select.png" />
+    <None Include="Resources\insert.png" />
+    <None Include="Resources\fgrttrfedz.PNG" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\calend.PNG" />
+    <None Include="Resources\bouton.png" />
+    <None Include="Resources\3.png" />
+    <None Include="Resources\3.3.png" />
+    <None Include="Resources\2.png" />
+    <None Include="Resources\2.2.png" />
+    <None Include="Resources\1.png" />
+    <None Include="Resources\1.1.png" />
+    <None Include="Resources\u6dr91ejr6toa0hc9qaqntr80d.png" />
+    <None Include="Resources\aesthetics-art-painting-aesthetic-48eabe6d702d46761ec7c38b66a7dc05.png" />
+    <None Include="Resources\cities-skylines-drawing-colorful-city-skyline-fb8caf807fabf390871391b8bda7dd8b.png" />
+    <None Include="Resources\computer-icons-password-login-user-padlock-edbf886925c5ad77adddc4534da985b3.png" />
+    <None Include="Resources\computer-icons-customer-service-user-others-c220d687922ba81cde06eb56372888cf.png" />
+    <None Include="Resources\troy-t-kcfL5jD6gtU-unsplash.jpg" />
+    <None Include="Resources\adrien-bruneau-xKNgP35E9Gk-unsplash.jpg" />
+    <None Include="Resources\car-volkswagen-passat-Škoda-octavia-window-car.jpg" />
+    <None Include="Resources\S7-modele--mercedes-cla-2-shooting-brake.jpg" />
+    <None Include="Resources\login-computer-icons-iconfinder-website-login-key-icon-lock-locked-login-ce69bbf645389faef31fb55ac258096d.png" />
+    <None Include="Resources\house-computer-icons-symbol-home-clip-art-adress-18d2c12a74bf34c02abfd61e5c1a1db9.png" />
+    <None Include="Resources\computer-icons-location-google-maps-location-icon-b5f9137fd6f6ea3e9f3378f7f54eb3ed.png" />
+    <None Include="Resources\computer-icons-google-account-user-profile-iconfinder-com-png-icons-download-profile-8732d7a952bd3a68096b7464947cfdda.png" />
+    <None Include="Resources\computer-icons-user-iconfinder-symbol-account-profile-icon-f7cdcb49bc8606162db8bc7290ec2cf6.png" />
+    <None Include="Resources\iphone-telephone-computer-icons-clip-art-free-telephone-icon-da9fbd8e98d48d182645213704441d95.png" />
+    <None Include="Resources\computer-icons-home-clip-art-black-home-icon-f57992519ea4d3683f778191be7a715a.png" />
+    <None Include="Resources\Muscle-Car-Mustang-GT-icon.png" />
+    <None Include="Resources\Muscle-Car-Chevrolet-Camaro-SS-icon.png" />
+    <None Include="Resources\0bbdcf4cc3144db8a1e0196aaff75a7c.jpg" />
+    <None Include="Resources\n-kamalov-VgWmqC4Wyw0-unsplash.jpg" />
+    <None Include="Resources\menu-hamburger-button-logo-chef-menu-button-e7b848f82fe5654995c0dfdf0fc7c11c.png" />
+    <None Include="Resources\5bbc4272b6ffb-e0531cf8d19049f96bb3700e1d4ac4d0.png" />
+    <None Include="Resources\5bbc426e3ee12-64dc71574d352b83eb3504e5ac42994b.png" />
+    <None Include="Resources\range-rover-evoque-car-land-rover-discovery-rover-company-silver-range-rover-evoque-car-fd30e53230cb22e0c688592dd10e014a.png" />
+    <None Include="Resources\porsche-930-2015-porsche-911-turbo-s-car-turbocharger-gold-porsche-911-turbo-aerokit-car-f68273dd508057f953e4cfdd091458c7.png" />
+    <None Include="Resources\car-rental-taxi-wordpress-renting-mercedes-car-png-image-be151dbe2da5e024765de7bd7e36aa6f.png" />
+    <None Include="Resources\car-clip-art-mercedes-car-png-image-1be34a7780dc03afc9471384319686d6.png" />
+    <None Include="Resources\toyota-hilux-car-pickup-truck-toyota-fortuner-toyota-d40cde95ee9d85654101f0f8d3d43757.png" />
+    <None Include="Resources\mercedes.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
